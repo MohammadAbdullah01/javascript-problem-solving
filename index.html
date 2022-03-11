@@ -57,6 +57,38 @@
             <h1>Reported posts</h1>
         </div>
     </main>
+
+    <section id="question-answer-section" class="container my-5">
+        <h1 class="text-center my-4">Question and answering part</h1>
+        <div class="card p-3">
+            <h3>How does javascript work ?</h3>
+            <p>Javascript একটি interpreted, single-threaded programming language । JS আমাদের (chrome)browser এ V8 নামক
+                engine এর
+                সাহায্যে Just In Time compilation এর মাধ্যমে run করে এবং servar side এ V8 engine এবং C++ এর সমন্বয়ে তৈরি
+                NodeJS runtime এর সাহায্যে run করে। browser এ JS run করার সময় প্রথমে আমাদের code কে parse করে tree
+                আকারে বানিয়ে ফেলে। তারপর v8 engine JIT compilation এর সাহায্যে code কে compile করে ফেলে। অতঃপর সেই
+                compiled code কে bytecode/machine code এ রুপান্তর করে CPU এর কাছে পাঠিয়ে দেয় এবং অবশেষে আমরা output
+                দেখতে পাই। javascript code run করার সময় ছোট ছোট অংশে ভাগ করে execution context তৈরি করে যা দুটি phase এর
+                মদ্ধ দিয়ে যায় -
+                creation phase এবং execution phase.
+            </p>
+        </div>
+        <div class="card p-3 mt-3">
+            <h3>What does Javascript event loop do ?</h3>
+            <p>
+                Javascript এর সাধারণ behavior- single-threaded, blocking এবং syncronous । Javascript যখন engine এ run
+                করে তখন heap এর মদ্ধে memory management এর কাজ হয় এবং call stack এ function গুলো stack আকারে call হয়।
+                কিন্তু call stack যখন'ই asyncronous কোন funtion পায় তখন তাকে Web Api কে
+                hand over করে দিয়ে দেয়। ফলে call stack এ syncronous কাজগুলো চলতে থাকে এবং web Api থেকে asyncronous
+                function গুলো call back queue তে
+                জমা হয় এবং অবশেষে call stack খালি হয়ে গেলে event loop এর সাহায্যে call back queue তে থাকা function গুলো
+                call stack এ তুলে দেয়। এভাবে evet loop use করে javascript non-blocking, multi-threaded পদ্ধতিতে code
+                execution করতে পারে।
+            </p>
+        </div>
+    </section>
+
+
     <footer></footer>
 
     <!-- add javascript  file  -->
